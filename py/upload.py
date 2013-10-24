@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from rauth import OAuth1Session
 import requests, hashlib, time, random
 
