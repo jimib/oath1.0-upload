@@ -33,17 +33,17 @@ On the Nodejs server we are using passport-http-oauth to validate the requests. 
 
 A TokenStrategy is created to authenticate requests.
 
-The first method supplies a consumer for the given consumer_key. If no matching consumer found false is returned instead.
-The second method supplies a token for the given token_key. If no matching token found false is returned instead.
-The third method checks the nonce and timestamp. This is optional but in this case we limit the age of timestamp, and ensure nonce is unique.
+1. First method supplies a consumer for the given consumer_key. If no matching consumer found false is returned instead.
+2. Second method supplies a token for the given token_key. If no matching token found false is returned instead.
+3. Third method checks the nonce and timestamp. This is optional but in this case we limit the age of timestamp, and ensure nonce is unique.
 
 ### see py/upload.py ###
 
 This is an example of uploading an image using Rauth. You can experiment with generating bad requests by toggling the flags:
 
-useValidCredentials: If False invalid consumer and token are used.
-useValidCheckSum: If False an invalid checksum is generated for each file.
-useRandomHash: If False the hash generated is not random, this causes server to reject second request as nonce is not unique.
-useValidTimeStamp: If False then the timestamp is corrupted (set to 0).
+1. useValidCredentials: If False invalid consumer and token are used.
+2. useValidCheckSum: If False an invalid checksum is generated for each file.
+3. useRandomHash: If False the hash generated is not random, this causes server to reject second request as nonce is not unique.
+4. useValidTimeStamp: If False then the timestamp is corrupted (set to 0).
 
 
