@@ -3,7 +3,7 @@
 from rauth import OAuth1Session
 import requests, hashlib, time, random
 
-useValidCredentials = True
+useValidCredentials = False
 useValidCheckSum = True
 useRandomHash = True
 useValidTimeStamp = True
