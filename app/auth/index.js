@@ -24,8 +24,8 @@ passport.use('token', new TokenStrategy(
 	}
   },
   // verify callback
-  function(accessToken, done) {
-	if(accessToken === token.key){
+  function(tokenKey, done) {
+	if(tokenKey === token.key){
 		return done(null, token, token.secret);
 	}else{
 		return done(null, false);
